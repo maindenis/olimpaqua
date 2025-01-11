@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title>Олимп-Аква</title>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -22,22 +21,27 @@
 			</div>
 			<div class="right_col">
 				<div class="inlines">
-					<div>
+					<div class="novisible_1124">
 						<a href="tel:84997556687" class="tel_link" >8 (499) 755-66-87</a>
 					</div>
 					<div>
 						<div id="respNav">
 							<ul class="resp_nav">
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Преимущества</a></li>
-								<li><a href="#">Схема работы</a></li>
-								<li><a href="#">Каталог</a></li>
-								<li><a href="#">Отзывы</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="#services">Услуги</a></li>
+								<li><a href="#adv">Преимущества</a></li>
+								<li><a href="#scheme">Схема работы</a></li>
+								<li><a href="#catalog">Каталог</a></li>
+								<li><a href="#revs">Отзывы</a></li>
+								<li><a href="#contacts">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
+				<button type="button" class="respmenubtn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</div>
 		</div>
 	</header>
@@ -45,7 +49,7 @@
 	<!-- Content -->
 	<div class="content">
 	<!-- Section 1 - Main Page -->
-	<section class="promo">
+	<section class="promo scrollSect">
 		<div class="row">
 			<div class="promo_descript">
 				<h2>БЫСТРО  НАДЁЖНО  ПРОФЕССИОНАЛЬНО</h2>
@@ -53,10 +57,10 @@
 				<p>Замена насосов в частных и промышленных скважинах любой сложности. Работаем 24/7, без выходных.</p>
 				<div class="btns_inlines">
 					<div>
-						<a href="#" class="blue_pill">Оставить заявку</a>
+						<a href="#contacts" class="blue_pill">Оставить заявку</a>
 					</div>
 					<div>
-						<a href="#" class="transparent_pill">Заказать выезд специалиста</a>
+						<a href="#calc" class="transparent_pill">Заказать выезд специалиста</a>
 					</div>
 				</div>
 				<div>
@@ -75,9 +79,9 @@
 	</section>
 	<!-- /Section 1 - Main Page -->
 	<!-- Section 2 - Main Page -->
-	<section class="sect_2">
+	<section class="sect_2 scrollSect">
 		<div class="thumbnails">
-			<div class="thumbs_row">
+			<div class="thumbs_col">
 				<div class="thumb">
 					<div>
 						<img src="img/icon_01.svg" alt="" loading="lazy" />
@@ -88,22 +92,30 @@
 				</div>
 				<div class="thumb">
 					<div>
-						<div class="triangle"></div>
-						<img src="img/icon_02.svg" alt="" loading="lazy" />
-					</div>
-					<div>
-						<p>Работаем с любыми скважинами и насосами</p>
-					</div>
-				</div>
-			</div>
-			<div class="thumbs_row">
-				<div class="thumb">
-					<div>
 						<img src="img/icon_03.svg" alt="" loading="lazy" />
 					</div>
 					<div>
 						<div class="triangle"></div>
 						<p>Оперативный выезд и диагностика</p>
+					</div>
+				</div>
+				<div class="thumb">
+					<div>						
+						<img src="img/icon_05.svg" alt="" loading="lazy" />
+					</div>
+					<div>
+						<p>Любая форма оплаты</p>
+					</div>
+				</div>
+			</div>
+			<div class="thumbs_col">
+				<div class="thumb">
+					<div>
+						<img src="img/icon_02.svg" alt="" loading="lazy" />
+					</div>
+					<div>
+						<div class="triangle"></div>
+						<p>Работаем с любыми скважинами и насосами</p>
 					</div>
 				</div>
 				<div class="thumb">
@@ -113,23 +125,13 @@
 					<div>
 						<p>Гарантия на все работы</p>
 					</div>
-				</div>
-			</div>
-			<div class="thumbs_row">
-				<div class="thumb">
-					<div>						
-						<img src="img/icon_05.svg" alt="" loading="lazy" />
-					</div>
-					<div>
-						<p>Любая форма оплаты</p>
-					</div>
-				</div>
+				</div>			
 				<div class="thumb">
 					<div>
-						<div class="triangle"></div>
 						<img src="img/icon_06.svg" alt="" loading="lazy" />
 					</div>
 					<div>
+						<div class="triangle"></div>
 						<p>Широкий выбор насосного оборудования в собственном <a href="#">магазине</a></p>
 					</div>
 				</div>
@@ -138,13 +140,14 @@
 	</section>
 	<!-- /Section 2 - Main Page -->
 	<!-- Section 3 - Main Page -->
-	<section class="sect_3">
+	<section class="sect_3 scrollSect" id="adv">
 		<div class="row">
 			<div class="h2_wrapp white">
 				<h2>ПОЧЕМУ ВЫБИРАЮТ “ОЛИМП-АКВА”?</h2>
 			</div>
 		</div>
 		<div class="article_wrapp">
+			<img src="img/img_01.jpg" alt="" loading="lazy" />
 			<div class="row">
 				<div class="article">
 					<div>
@@ -171,25 +174,24 @@
 								<p>Бесплатная консультация</p>
 							</div>
 						</div>
-						<div>
+						<div class="article_pill_wrapp">
 							<a href="#" class="blue_pill">Узнать стоимость</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<img src="img/img_01.jpg" alt="" loading="lazy" />
 		</div>
 	</section>
 	<!-- /Section 3 - Main Page -->
 	<!-- Section 4 - Main Page -->
-	<section class="sect_4">
+	<section class="sect_4 scrollSect" id="services">
 		<div class="row">
 			<div class="h2_two_cols">
 				<div>
 					<h2>УСЛУГИ КОМПАНИИ</h2>
 				</div>
 				<div>
-					<a href="tel:84997556687" class="tel_thumb blue">
+					<a href="tel:84997556687" class="tel_thumb blue resp">
 						<div>
 							<img src="img/tel_blue.svg" alt="" loading="lazy" />
 						</div>
@@ -201,65 +203,61 @@
 				</div>
 			</div>
 			<div class="thumbnails_2">
-				<div class="thumbnails_2_row">
-					<div class="thumb_2">
-						<div class="icon_box">
-							<img src="img/icon_07.svg" alt="" loading="lazy" />
-						</div>
-						<p>Замена насоса в скважине</p>
+				<div class="thumb_2">
+					<div class="icon_box">
+						<img src="img/icon_07.svg" alt="" loading="lazy" />
 					</div>
-					<div class="thumb_2">
-						<div class="icon_box">
-							<img src="img/icon_08.svg" alt="" loading="lazy" />
-						</div>
-						<p>Диагностика насосного оборудования</p>
-					</div>
-					<div class="thumb_2">
-						<div class="icon_box">
-							<img src="img/icon_09.svg" alt="" loading="lazy" />
-						</div>
-						<p>Установка нового оборудования</p>
-					</div>
+					<p>Замена насоса в скважине</p>
 				</div>
-				<div class="thumbnails_2_row">
-					<div class="thumb_2">
-						<div class="icon_box">
-							<img src="img/icon_10.svg" alt="" loading="lazy" />
-						</div>
-						<p>Обслуживание скважин</p>
+				<div class="thumb_2">
+					<div class="icon_box">
+						<img src="img/icon_08.svg" alt="" loading="lazy" />
 					</div>
-					<div class="thumb_2">
-						<div class="icon_box">
-							<img src="img/icon_11.svg" alt="" loading="lazy" />
-						</div>
-						<p>Ремонт насосного оборудования</p>
+					<p>Диагностика насосного оборудования</p>
+				</div>
+				<div class="thumb_2">
+					<div class="icon_box">
+						<img src="img/icon_09.svg" alt="" loading="lazy" />
 					</div>
-					<div class="thumb_2">
-						<div class="icon_box">
-							<img src="img/icon_12.svg" alt="" loading="lazy" />
-						</div>
-						<p>Продажа насосного оборудования<br /> <a href="#">В магазин</a></p>
+					<p>Установка нового оборудования</p>
+				</div>
+				<div class="thumb_2">
+					<div class="icon_box">
+						<img src="img/icon_10.svg" alt="" loading="lazy" />
 					</div>
-					<div class="thumb_2">
-						<div class="icon_box">
-							<img src="img/icon_13.svg" alt="" loading="lazy" />
-						</div>
-						<p>Консультация по выбору насоса</p>
+					<p>Обслуживание скважин</p>
+				</div>
+				<div class="thumb_2">
+					<div class="icon_box">
+						<img src="img/icon_11.svg" alt="" loading="lazy" />
 					</div>
+					<p>Ремонт насосного оборудования</p>
+				</div>
+				<div class="thumb_2">
+					<div class="icon_box">
+						<img src="img/icon_12.svg" alt="" loading="lazy" />
+					</div>
+					<p>Продажа насосного оборудования<br /> <a href="#">В магазин</a></p>
+				</div>
+				<div class="thumb_2">
+					<div class="icon_box">
+						<img src="img/icon_13.svg" alt="" loading="lazy" />
+					</div>
+					<p>Консультация по выбору насоса</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- /Section 4 - Main Page -->
 	<!-- Section 5 - Main Page -->
-	<section class="sect_5">
+	<section class="sect_5 scrollSect" id="scheme">
 		<div class="row">
 			<div class="h2_two_cols white">
 				<div>
 					<h2>КАК МЫ РАБОТАЕМ?</h2>
 				</div>
 				<div>
-					<a href="tel:84997556687" class="tel_thumb">
+					<a href="tel:84997556687" class="tel_thumb resp">
 						<div>
 							<img src="img/tel.svg" alt="" loading="lazy" />
 						</div>
@@ -336,7 +334,7 @@
 	</section>
 	<!-- /Section 5 - Main Page -->
 	<!-- Section 6 - Main Page -->
-	<section class="sect_6">
+	<section class="sect_6 scrollSect">
 		<div class="row">
 			<div class="h2_wrapp h2_wrapp_2">
 				<h2>НАШЕ ОБОРУДОВАНИЕ</h2>
@@ -356,6 +354,30 @@
 					<img src="img/img_10.jpg" alt="" loading="lazy" />
 				</div>
 			</div>
+			<div class="gallery_resp">
+				<div class="gallery_resp_row_1">
+					<div>
+						<img src="img/img_12.jpg" alt="" loading="lazy" />
+						<img src="img/img_13.jpg" alt="" loading="lazy" />
+					</div>
+					<div>
+						<img src="img/img_14.jpg" alt="" loading="lazy" />
+					</div>
+				</div>
+				<div class="gallery_resp_row_2">
+					<div>
+						<img src="img/img_15.jpg" alt="" loading="lazy" />
+					</div>
+					<div>
+						<img src="img/img_16.jpg" alt="" loading="lazy" />
+						<img src="img/img_17.jpg" alt="" loading="lazy" />
+					</div>
+				</div>
+				<div class="gallery_resp_row_3">
+					<img src="img/img_18.jpg" alt="" loading="lazy" />
+					<img src="img/img_19.jpg" alt="" loading="lazy" />
+				</div>
+			</div>
 			<div class="btn_wrapp">
 				<a href="#" class="blue_pill">Перейти в магазин</a>
 			</div>
@@ -363,13 +385,16 @@
 	</section>
 	<!-- /Section 6 - Main Page -->
 	<!-- Section Calc -->
-	<section class="sect_calc">
+	<section class="sect_calc scrollSect" id="calc">
 		<div class="row">
 			<div class="h2_wrapp h2_wrapp_range">
 				<h2>БЕСПЛАТНО РАССЧИТАЙТЕ СТОИМОСТЬ</h2>
 			</div>
 			<div class="calculator__items">
-	            <button data-value="1" class="calculator__item active">
+				<button data-value="1" class="calculator__item active">
+	                Замена насоса
+	            </button>
+	            <button data-value="1" class="calculator__item">
 	                Ремонт скважин
 	            </button>
 	            <button data-value="2" class="calculator__item">
@@ -451,14 +476,14 @@
 	</section>
 	<!-- /Section Calc -->
 	<!-- Section 7 - Main Page -->
-	<section class="sect_7">
+	<section class="sect_7 scrollSect" id="revs">
 		<div class="row">
 			<div class="h2_wrapp h2_wrapp_3 white">
 				<h2>ОТЗЫВЫ КЛИЕНТОВ</h2>
 			</div>
 			<div class="slider_wrapp">
 				<div class="slider">
-					<div>
+					<div class="slide">
 						<div class="rev">
 							<div class="rev_header">
 								<div>
@@ -474,7 +499,7 @@
 							</div>
 						</div>
 					</div>
-					<div>
+					<div class="slide">
 						<div class="rev">
 							<div class="rev_header">
 								<div>
@@ -490,7 +515,7 @@
 							</div>
 						</div>
 					</div>
-					<div>
+					<div class="slide">
 						<div class="rev">
 							<div class="rev_header">
 								<div>
@@ -506,7 +531,7 @@
 							</div>
 						</div>
 					</div>
-					<div>
+					<div class="slide">
 						<div class="rev">
 							<div class="rev_header">
 								<div>
@@ -537,9 +562,9 @@
 	</section>
 	<!-- /Section 7 - Main Page -->
 	<!-- Section 8 - Main Page -->
-	<section class="sect_8">
+	<section class="sect_8 scrollSect" id="contacts">
 		<div class="row">
-			<div class="h2_wrapp h2_wrapp_4">
+			<div class="h2_wrapp h2_wrapp_4 novisible_600">
 				<h2>КОНТАКТНЫЕ ДАННЫЕ</h2>
 			</div>
 			<div class="form_box_sect">
@@ -582,7 +607,7 @@
 						</div>
 					</div>
 					<div>
-						<a href="tel:84997556687" class="tel_thumb blue">
+						<a href="tel:84997556687" class="tel_thumb blue resp">
 							<div>
 								<img src="img/tel_blue.svg" alt="" loading="lazy" />
 							</div>
@@ -604,16 +629,18 @@
 				<h2>КАРТА</h2>
 			</div>
 			<div class="map_box">
-				<div class="map" data-long="55.6677755" data-lat="37.4429331" data-zoom="15" id="map"></div>
+				<div class="map_inner">
+					<div class="map" data-long="55.6677755" data-lat="37.4429331" data-zoom="15" id="map"></div>
+				</div>
 			</div>
-			<div class="contacts_two_cols">
+			<div class="contacts_two_cols contacts_two_cols_2">
 				<div>
 					<div class="time_wrapp">
 						<p>Работаем без выходных</p>
 					</div>
 				</div>
 				<div>
-					<a href="tel:84997556687" class="tel_thumb blue">
+					<a href="tel:84997556687" class="tel_thumb blue resp">
 						<div>
 							<img src="img/tel_blue.svg" alt="" loading="lazy" />
 						</div>
@@ -631,25 +658,25 @@
 	<!-- /Content -->
 	<!-- Footer -->
 	<footer class="footer_section">
-		<!-- <div class="row"> -->
-			<div class="footer_tree_cols">
-				<div>
-					<a href="#" class="footer_logo">
-						<img src="img/footer_logo.png" alt="" loading="lazy" />
-					</a>
-					<div class="footer_logo_descript">
-						<p>Бурение и обслуживание скважин<br /> в Москве и Московской области</p>
-					</div>
-					<div class="time_thumb">
-						<img src="img/clock.svg" alt="" loading="lazy" />
-						<p>Работаем без выходных с 8:00 до 23:00</p>
-					</div>
-					<div class="footer_text">
-						<p>ООО «Олимп-Аква ШОП»</p>
-						<p>ИНН: 9724080487</p>
-						<p>ОГРН: 1227700243264</p>
-					</div>
+		<div class="footer_tree_cols">
+			<div>
+				<a href="#" class="footer_logo">
+					<img src="img/footer_logo.png" alt="" loading="lazy" />
+				</a>
+				<div class="footer_logo_descript">
+					<p>Бурение и обслуживание скважин<br /> в Москве и Московской области</p>
 				</div>
+				<div class="time_thumb">
+					<img src="img/clock.svg" alt="" loading="lazy" />
+					<p>Работаем без выходных с 8:00 до 23:00</p>
+				</div>
+				<div class="footer_text">
+					<p>ООО «Олимп-Аква ШОП»</p>
+					<p>ИНН: 9724080487</p>
+					<p>ОГРН: 1227700243264</p>
+				</div>
+			</div>
+			<div>
 				<div>
 					<div class="h3_wrapp">
 						<h3>Услуги</h3>
@@ -660,87 +687,87 @@
 						<li><a href="#">Замена насосов</a></li>
 					</ul>
 				</div>
+			</div>
+			<div>
+				<div class="h3_wrapp">
+					<h3>Карта сайта</h3>
+				</div>
+				<ul class="footer_nav">
+					<li><a href="#">Цены</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Полезные статьи</a></li>
+					<li><a href="#">Каталог товаров</a></li>
+					<li><a href="#">Вопрос-Ответ</a></li>
+				</ul>
+			</div>
+			<div>
 				<div>
 					<div class="h3_wrapp">
-						<h3>Карта сайта</h3>
+						<h3>Контакты</h3>
 					</div>
-					<ul class="footer_nav">
-						<li><a href="#">Цены</a></li>
-						<li><a href="#">Акции</a></li>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Полезные статьи</a></li>
-						<li><a href="#">Каталог товаров</a></li>
-						<li><a href="#">Вопрос-Ответ</a></li>
+					<div class="contacts_items">
+						<div>
+							<a href="mailto:olimp-aqua@mail.ru" class="contacts_item">
+								<div>
+									<img src="img/mail.svg" alt="" loading="lazy" />
+								</div>
+								<div>
+									<p>olimp-aqua@mail.ru</p>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href="tel:+79055799233" class="contacts_item">
+								<div>
+									<img src="img/phone.svg" alt="" loading="lazy" />
+								</div>
+								<div>
+									<p>+7 (905) 579-92-33</p>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href="tel:84997556687" class="contacts_item">
+								<div>
+									<img src="img/phone_2.svg" alt="" loading="lazy" />
+								</div>
+								<div>
+									<p>8 (499) 755-66-87</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<ul class="soc_list">
+						<li><a href="https://wa.me/+79254153393"><img src="img/wp.svg" alt="" loading="lazy" /></a></li>
+						<li><a href="#"><img src="img/tel_2.svg" alt="" loading="lazy" /></a></li>
 					</ul>
 				</div>
-				<div>
-					<div>
-						<div class="h3_wrapp">
-							<h3>Контакты</h3>
-						</div>
-						<div class="contacts_items">
-							<div>
-								<a href="mailto:olimp-aqua@mail.ru" class="contacts_item">
-									<div>
-										<img src="img/mail.svg" alt="" loading="lazy" />
-									</div>
-									<div>
-										<p>olimp-aqua@mail.ru</p>
-									</div>
-								</a>
-							</div>
-							<div>
-								<a href="tel:+79055799233" class="contacts_item">
-									<div>
-										<img src="img/phone.svg" alt="" loading="lazy" />
-									</div>
-									<div>
-										<p>+7 (905) 579-92-33</p>
-									</div>
-								</a>
-							</div>
-							<div>
-								<a href="tel:84997556687" class="contacts_item">
-									<div>
-										<img src="img/phone_2.svg" alt="" loading="lazy" />
-									</div>
-									<div>
-										<p>8 (499) 755-66-87</p>
-									</div>
-								</a>
-							</div>
-						</div>
-						<ul class="soc_list">
-							<li><a href="https://wa.me/+79254153393"><img src="img/wp.svg" alt="" loading="lazy" /></a></li>
-							<li><a href="#"><img src="img/tel_2.svg" alt="" loading="lazy" /></a></li>
-						</ul>
-					</div>
-				</div>
 			</div>
-			<div class="seo_text">
-				<p> Балашиха Бронница Волоколамский район Воскресенский район
-                    Дмитровский район Долгопрудный Домодедовский район Егорьевский
-                        район Жуковский Зарайский район Звенигород Ивантеевка Истринский
-                        район Каширский район Клинский район Коломенский район Королёв
-                        Красноармейск Красногорский район Ленинский район Ликино-Дулёво
-                        Лотошинский район Луховицкий район Люберецкий район Можайский
-                        район Мытищинский район Наро-Фоминский район Ногинский район
-                        Одинцовский район Озёрский район Орехово-Зуевский район
-                        Павлово-Посадский район Подольский район Пушкинский район
-                        Раменский район Рузский район Сергиево-Посадский район
-                        Серебряно-Прудский район Серпуховский район Солнечногорский район
-                        Ступинский район Троицк Фрязино Химки Чеховский район Щёлковский
-                        район Электрогорск Электросталь</p>
+		</div>
+		<div class="seo_text">
+			<p> Балашиха Бронница Волоколамский район Воскресенский район
+                Дмитровский район Долгопрудный Домодедовский район Егорьевский
+                    район Жуковский Зарайский район Звенигород Ивантеевка Истринский
+                    район Каширский район Клинский район Коломенский район Королёв
+                    Красноармейск Красногорский район Ленинский район Ликино-Дулёво
+                    Лотошинский район Луховицкий район Люберецкий район Можайский
+                    район Мытищинский район Наро-Фоминский район Ногинский район
+                    Одинцовский район Озёрский район Орехово-Зуевский район
+                    Павлово-Посадский район Подольский район Пушкинский район
+                    Раменский район Рузский район Сергиево-Посадский район
+                    Серебряно-Прудский район Серпуховский район Солнечногорский район
+                    Ступинский район Троицк Фрязино Химки Чеховский район Щёлковский
+                    район Электрогорск Электросталь</p>
+		</div>
+		<div class="footer_two_cols">
+			<div>
+				<a href="#" class="politic">Политика обработки персональных данных</a>
 			</div>
-			<div class="footer_two_cols">
-				<div>
-					<a href="#" class="politic">Политика обработки персональных данных</a>
-				</div>
-				<div>
-					<p class="corp">© 2014-2025 Олимп-Аква</p>
-				</div>
+			<div>
+				<p class="corp">© 2014-2025 Олимп-Аква</p>
 			</div>
-		<!-- </div> -->
+		</div>
 	</footer>
 	<!-- /Footer -->
 	<button type="button" class="call_btn"></button>
