@@ -150,7 +150,7 @@ $(document).ready(function() {
       $(this).addClass("active");
       if( hrefAttr.length > 0 && hrefAttr != "#" ) {
           $('html, body').stop().animate({
-              'scrollTop': $(hrefAttr).offset().top-10
+              'scrollTop': $(hrefAttr).offset().top
           }, 500);
       }
     });
